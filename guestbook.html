@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <title>Livre d'Or</title>
+  <link href="assets/css/or.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      overflow-x: hidden;
+      background: #ddd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      margin-bottom: 6vh;
+      font-size: 30px;
+      text-decoration: underline;
+    }
+
+    form {
+      background: #c39089;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      width: 80%;
+      align-items: center;
+    }
+
+    form>.myInput {
+      width: 80%;
+      display: flex;
+      margin-top: 17px;
+    }
+
+    form>.myInput>p {
+      width: 160px;
+      font-size: 20px;
+    }
+
+    form>.myInput>.input {
+      width: 400px;
+    }
+
+    form>.controlss {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    form>.controlss>input,
+    form>.controlss>.btn {
+      width: 100px;
+      height: 30px;
+      font-size: 16px;
+      border-radius: 10px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .consulter {
+      margin-top: 20px;
+      text-decoration: underline;
+      font-size: 20px;
+      color: black;
+      font-weight: 800;
+    }
+
+    .ele {
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 10px;
+      border-bottom: 3px solid black;
+      padding-left: 4vh;
+      border-top: 3px solid black;
+    }
+
+    }
+
+    .ele>p {}
+
+    .ele>p>em {
+      text-decoration: underline;
+      font-weight: 800;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+  if (document.location.href.includes('reload')) {
+    document.location.href = document.location.href.replace('?reload', '');
+  }
+</script>
+
+<body>
+  <div class="content">
+    <h2 class="title">Bienvenue dans mon livre d'or</h2>
+
+    <form method="post" action="../cgi-bin/Python/guestbook.py">
+      <div class="myInput">
+        <p>Nom : </p>
+        <input required="" class="input" name="nom" type="text" />
+      </div>
+      <div class="myInput">
+        <p>Prénom : </p>
+        <input required="" class="input" name="prenom" type="text" />
+      </div>
+      <div class="myInput">
+        <p>Ville : </p>
+        <input required="" class="input" name="ville" type="text" />
+      </div>
+      <div class="myInput">
+        <p>Commentaire : </p>
+        <textarea required="" class="input" cols="40" rows="3" name="comment"> </textarea>
+      </div>
+      <div class="controlss">
+        <input type="submit" class="Btn Submit" value="Envoyer" />
+        <a class="btn" href="../portfolio/index.fr.html">Annuler</a>
+      </div>
+    </form>
+    <p class="consulter">>>> Comments : <<<< /p><br>
+  </div>
+  <div class="ele">
+    <p><em>Date</em>: 2021-06-18</p>
+    <p><em>From</em>: Maroua SAB</p>
+    <p><em>Ville</em>: FES</p>
+    <p><em>Mesg</em>: Bonjour Monsieur j'espère que vous allez bien</p>
+  </div>
